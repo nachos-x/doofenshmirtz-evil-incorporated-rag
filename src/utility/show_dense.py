@@ -64,8 +64,6 @@ def _row(query: str, decision: RouteDecision, hits: list[DenseHit]) -> dict:
         "source": decision.source,
         "router": {
             "lane": decision.lane,
-            "policy_id": decision.policy_id,
-            "version": decision.version,
         },
         "where": chroma_where(decision),
         "hit_count": len(hits),
